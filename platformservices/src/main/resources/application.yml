@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: platformservices
+    
+    data:
+        mongodb:
+            uri: ${MONGO_URI:mongodb://localhost:27017/platformservices}
+
+    redis:
+        url: ${REDIS_URI:redis://localhost:6379}
+
+
+server:
+    port: ${PORT:9876}
+    
+
+logging:
+    level:
+        web: ${LOG_LEVEL:DEBUG}
+    file:
+        path: ${LOG_PATH:./log}
+        name: ${logging.file.path}/platformservices.log
+
+
